@@ -46,6 +46,6 @@ public class MainActivity extends AppCompatActivity {
         ImageView image = (ImageView) findViewById(R.id.iv_imagen);
         PopupMenu popup = new PopupMenu(this, v);
         popup.getMenuInflater().inflate(R.menu.menu_popup, popup.getMenu());
-        popup.show();
+        popup.show(); //mostramos el popup
     }
 }
