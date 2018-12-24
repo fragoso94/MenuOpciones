@@ -46,6 +46,21 @@ public class MainActivity extends AppCompatActivity {
         ImageView image = (ImageView) findViewById(R.id.iv_imagen);
         PopupMenu popup = new PopupMenu(this, v);
         popup.getMenuInflater().inflate(R.menu.menu_popup, popup.getMenu());
+        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.mView:
+                        Toast.makeText(MainActivity.this, "Vista", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.mViewDetail:
+                        Toast.makeText(MainActivity.this, "Vista Detalle", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                return false;
+            }
+        });
+
         popup.show(); //mostramos el popup
     }
 }
