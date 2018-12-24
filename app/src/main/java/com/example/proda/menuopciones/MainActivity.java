@@ -38,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent menuContexto = new Intent(MainActivity.this, MenuContexto.class);
                 startActivity(menuContexto);
                 //finish();
+                break;
+            case R.id.mRefresh:
+                Toast.makeText(MainActivity.this, "Refrescando", Toast.LENGTH_SHORT).show();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
